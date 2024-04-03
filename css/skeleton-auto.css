@@ -216,6 +216,7 @@ hr {
 
 10%-40%: Squircles
 50% (default): True circle
+also, show the second picture if less than 600 px
 */
 .avatar {
   width: 225px;
@@ -223,7 +224,29 @@ hr {
   object-fit: cover;
   background-position: center;
   border-radius: 15%;
+  display: none; /* Hide both images by default */
 }
+
+@media (min-width: 600px) {
+  #avatar1 {
+    display: block; /* Display first image when device width is more than 600px */
+  }
+
+  #avatar2 {
+    display: none; /* Hide second image when device width is more than 600px */
+  }
+}
+
+@media (max-width: 599px) {
+  #avatar1 {
+    display: none; /* Hide first image when device width is less than or equal to 599px */
+  }
+
+  #avatar2 {
+    display: initiali; /* Display second image when device width is less than or equal to 599px */
+  }
+}
+
 
 /* open-sans-regular - vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic */
 @font-face {
