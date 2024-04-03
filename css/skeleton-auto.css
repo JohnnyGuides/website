@@ -243,7 +243,7 @@ also, show the second picture if less than 600 px
   }
 
   #avatar2 {
-    display: initiali; /* Display second image when device width is less than or equal to 599px */
+    display: initial; /* Display second image when device width is less than or equal to 599px */
   }
 }
 
