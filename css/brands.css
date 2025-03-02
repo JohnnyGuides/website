@@ -26,6 +26,13 @@
 
 */
 
+/* Avatar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.avatar {
+  margin-right: 1rem;
+}
+
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -64,6 +71,45 @@ button:hover,
   filter: brightness(90%);
 }
 
+.button-selfmade,
+button-selfmade {
+  display: inline-block;
+  text-decoration: none;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  width: 300px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 6px 12px 6px 12px;
+  letter-spacing: 0.1px;
+  white-space: wrap;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button-selfmade:hover,
+.button-selfmade:focus {
+  color: #212121;
+  border-color: #888;
+  outline: #7AB8FF solid 3px;
+}
+
+.button-selfmade.button-primary {
+  color: #fff;
+  filter: brightness(90%);
+}
+
+.button-selfmade.button-primary:hover,
+.button-selfmade.button-primary:focus {
+  color: #fff;
+  filter: brightness(90%);
+}
+
+
+
 /* Brand Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -75,7 +121,28 @@ button:hover,
 }
 
 .pornhub {
-  padding: 0px 8px 3.5px 0px;
+  padding: 0px 0px 0px 0px;
+  vertical-align: middle;
+  width: 105px;
+  height: 37px;
+}
+
+.xvideos {
+  padding: 0px 8px 1px 0px;
+  vertical-align: middle;
+  width: 125px;
+  height: 34px;
+}
+
+.xnxx {
+  padding: 0px 8px 1px 0px;
+  vertical-align: middle;
+  width: 150px;
+  height: 30px;
+}
+
+.clips4sale {
+  padding: 0px 8px 0px 0px;
   vertical-align: middle;
   width: 50px;
   height: 20px;
@@ -688,6 +755,18 @@ button:hover,
   filter: brightness(90%);
 }
 
+/* Clips4sale */
+.button.button-clips4sale {
+  color: #ffffff;
+  background-color: #140022;
+  border: 1px solid #1f1229;
+}
+.button.button-clips4sale:hover,
+.button.button-clips4sale:focus {
+  filter: brightness(90%);
+}
+
+
 /* Partiful */
 .button.button-partiful {
   color: #ffffff;
@@ -1141,7 +1220,7 @@ button:hover,
 .button.button-x {
   color: #FFFFFF;
   background-color: #000000;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #141414;
 }
 .button.button-x:hover,
 .button.button-x:focus {
@@ -1182,20 +1261,53 @@ button:hover,
 /* pornhub */
 .button.button-pornhub {
   color: #ffffff;
-  background-color: #c96b00;
+  background-color: #d17813;
 }
 .button.button-pornhub:hover,
 .button.button-pornhub:focus {
   filter: brightness(90%);
 }
 
-
 /* manyvids */
 .button.button-manyvids {
   color: #ffffff;
   background-color: #000000;
+  border: 1px solid #181818;
 }
 .button.button-manyvids:hover,
 .button.button-manyvids:focus {
+  filter: brightness(90%);
+}
+
+/* sheer */
+.button.button-sheer {
+  color: #ffffff;
+  background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
+  border: 1px solid #1d1d1d;
+}
+.button.button-sheer:hover,
+.button.button-sheer:focus {
+  filter: brightness(90%);
+}
+
+/* xvideos */
+.button.button-xvideos {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #181818;
+}
+.button.button-xvideos:hover,
+.button.button-xvideos:focus {
+  filter: brightness(90%);
+}
+
+/* xnxx */
+.button.button-xnxx {
+  color: #1900ff;
+  background-color: #3700ff;
+  border: 1px solid #6985ff;
+}
+.button.button-xnxx:hover,
+.button.button-xnxx:focus {
   filter: brightness(90%);
 }
