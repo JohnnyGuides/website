@@ -1,37 +1,337 @@
-/*
-* littlelink.io
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
+/* ==========================================================================
+   Johnny Guides Website Styles
+   ========================================================================== */
 
-/*
-* Built using on:
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
+:root {
+  --text-dim: #dddddd;
+  --muted: #888888;
+  --muted-light: #bdbdbd;
+  --line: #2b2b2b;
+  --focus: #7ab8ff;
+  --focus-ring: 3px solid var(--focus);
 
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-
-- Buttons
-- Brand Styles
-
-*/
-
-/* Avatar
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.avatar {
-  margin-right: 1rem;
+  --button-width: 276px;
+  --profile-width: 420px;
+  --toy-width: 420px;
 }
 
+/* ==========================================================================
+   Shared Layout
+   ========================================================================== */
+
+.top-links {
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+.top-links__items {
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.top-links__items a {
+  color: var(--text-dim);
+  text-decoration: none;
+}
+
+.top-links__items a:hover,
+.top-links__items a:focus {
+  color: #ffffff;
+}
+
+.top-links__divider {
+  width: var(--button-width);
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid var(--line);
+}
+
+.footer-note {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Content Pages
+   ========================================================================== */
+
+.content-page {
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-page--faq {
+  max-width: 720px;
+}
+
+.content-page--privacy {
+  max-width: 760px;
+  margin-top: 10%;
+}
+
+.page-back-link {
+  margin-bottom: 1.2rem;
+}
+
+.page-title {
+  margin-bottom: 0.8rem;
+}
+
+.page-title--privacy {
+  line-height: 1.2;
+}
+
+.page-lead {
+  margin-bottom: 2rem;
+  color: var(--muted-light);
+}
+
+.page-footer-link {
+  margin-bottom: 0;
+}
+
+.faq-anchor {
+  scroll-margin-top: 24px;
+}
+
+.faq-flash {
+  animation: faqBlink 0.42s ease-in-out 2;
+}
+
+@keyframes faqBlink {
+  0%,
+  100% {
+    color: inherit;
+    text-shadow: none;
+  }
+
+  50% {
+    color: var(--focus);
+    text-shadow: 0 0 10px rgba(122, 184, 255, 0.35);
+  }
+}
+
+/* ==========================================================================
+   Home Page Layout
+   ========================================================================== */
+
+.page-column {
+  --profile-rail-gap: clamp(36px, 7vw, 48px);
+  --section-label-footprint: 24px;
+  margin-top: var(--profile-rail-gap);
+}
+
+.profile-card {
+  width: min(100%, var(--profile-width));
+  margin: 0 auto;
+  margin-bottom: calc(var(--profile-rail-gap) - var(--section-label-footprint));
+  container-type: inline-size;
+}
+
+.profile-card__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 4cqw, 22px);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.profile-card__image {
+  display: block;
+  width: clamp(96px, 32cqw, 168px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-card__meta {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  text-align: left;
+}
+
+.profile-card__handle,
+.profile-card__tagline {
+  font-size: clamp(16px, 5.2cqw, 26px);
+  line-height: 1.28;
+  white-space: nowrap;
+}
+
+.profile-card__tagline {
+  opacity: 0;
+  animation: profileTaglineFade 3s ease forwards;
+}
+
+@keyframes profileTaglineFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.link-group {
+  margin-bottom: 1rem;
+}
+
+.link-group--paid .section-label {
+  margin-top: 1.8rem;
+}
+
+.link-group--socials {
+  margin-bottom: 2rem;
+}
+
+.section-label {
+  width: calc(var(--button-width) + 24px);
+  max-width: 100%;
+  margin: 0 auto 0.75rem;
+  text-align: right;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.toy-section__title,
+.toy-section__subtitle {
+  width: 100%;
+  text-align: right;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.toy-section {
+  width: min(var(--toy-width), 100%);
+  max-width: 100%;
+  margin: 0 auto 2.45rem;
+  text-align: left;
+  scroll-margin-top: 32px;
+}
+
+.toy-section__title {
+  margin-bottom: 0.8rem;
+  padding-left: 2px;
+  letter-spacing: 0.14em;
+  line-height: 1;
+}
+
+.toy-section__subtitle {
+  margin-top: 1rem;
+}
+
+.toy-section__subtitle strong {
+  color: #dfe9f7;
+  font-weight: 700;
+}
+
+.toy-section__subtitle--tight {
+  margin-top: 0.2rem;
+}
+
+.toy-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.toy-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 86px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #3a3a3a;
+  border-radius: 14px;
+  background: radial-gradient(120% 130% at 50% 0%, #2a2a2a 0%, #1f1f1f 52%, #181818 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 10px 24px rgba(0, 0, 0, 0.16);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.toy-card:hover,
+.toy-card:focus {
+  color: #ffffff;
+  border-color: #5a5a5a;
+  outline: var(--focus-ring);
+  background: linear-gradient(180deg, #292929 0%, #1f1f1f 100%);
+  transform: translateY(-1px);
+}
+
+.toy-section.toy-section--flash .toy-card {
+  animation: toyBlink 0.42s ease-in-out 2;
+}
+
+@keyframes toyBlink {
+  0%,
+  100% {
+    border-color: #3a3a3a;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      0 10px 24px rgba(0, 0, 0, 0.16);
+  }
+
+  50% {
+    border-color: var(--focus);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 0 0 3px rgba(122, 184, 255, 0.55),
+      0 10px 24px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.toy-card__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform-origin: center;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.32));
+}
+
+.toy-card--handy .toy-card__image {
+  width: 95px;
+  transform: translate(-50%, -50%) rotate(-16deg);
+}
+
+.toy-card--erovenus .toy-card__image {
+  width: 82px;
+  transform: translate(-50%, -50%);
+}
+
+.toy-card--tantaly .toy-card__image {
+  width: 82px;
+  transform: translate(-50%, -49%) rotate(-8deg);
+}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -44,7 +344,7 @@ button {
   text-align: center;
   vertical-align: middle;
   font-size: 18px;
-  width: 300px;
+  width: 276px;
   font-weight: 700;
   line-height: 20px;
   padding: 14px 12px 12px 12px;
@@ -79,7 +379,7 @@ button-selfmade {
   text-align: center;
   vertical-align: middle;
   font-size: 18px;
-  width: 300px;
+  width: 276px;
   font-weight: 700;
   line-height: 20px;
   padding: 6px 12px 6px 12px;
@@ -120,11 +420,22 @@ button-selfmade:hover,
   height: 20px;
 }
 
-.pornhub {
-  padding: 0px 0px 0px 0px;
-  vertical-align: middle;
-  width: 105px;
-  height: 37px;
+.pornhub-wordmark,
+.faphouse-wordmark {
+  display: block;
+  padding: 0;
+  width: auto;
+  height: 24px;
+  transform-origin: center;
+}
+
+.pornhub-wordmark {
+  transform: scale(1.28);
+}
+
+.faphouse-wordmark {
+  height: 22px;
+  transform: scale(1.08);
 }
 
 .xvideos {
@@ -755,11 +1066,21 @@ button-selfmade:hover,
   filter: brightness(90%);
 }
 
+/* fansly */
+.button.button-fansly {
+  color: #2699f7;
+  background-color: #ffffff;
+}
+.button.button-fansly:hover,
+.button.button-fansly:focus {
+  filter: brightness(90%);
+}
+
 /* Clips4sale */
 .button.button-clips4sale {
   color: #ffffff;
   background-color: #140022;
-  border: 1px solid #1f1229;
+  border: 1px solid #510094;
 }
 .button.button-clips4sale:hover,
 .button.button-clips4sale:focus {
@@ -1220,7 +1541,7 @@ button-selfmade:hover,
 .button.button-x {
   color: #FFFFFF;
   background-color: #000000;
-  border: 1px solid #141414;
+  border: 1px solid #ffffff;
 }
 .button.button-x:hover,
 .button.button-x:focus {
@@ -1260,6 +1581,11 @@ button-selfmade:hover,
 
 /* pornhub */
 .button.button-pornhub {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 12px;
   color: #ffffff;
   background-color: #d17813;
 }
@@ -1268,11 +1594,27 @@ button-selfmade:hover,
   filter: brightness(90%);
 }
 
+/* faphouse */
+.button.button-faphouse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 12px;
+  color: #111111;
+  background-color: #222222;
+    border: 1px solid #f3ba2c;
+}
+.button.button-faphouse:hover,
+.button.button-faphouse:focus {
+  filter: brightness(90%);
+}
+
 /* manyvids */
 .button.button-manyvids {
   color: #ffffff;
   background-color: #000000;
-  border: 1px solid #181818;
+  border: 1px solid #ffffff;
 }
 .button.button-manyvids:hover,
 .button.button-manyvids:focus {
